@@ -14,7 +14,7 @@ frame2 = ttk.Frame(notebook, width=400, height=280)
 frame1.pack(fill="both", expand=True)
 frame2.pack(fill="both", expand=True)
 notebook.add(frame1, text="run regression")
-notebook.add(frame2, text="send (rsync)")
+notebook.add(frame2, text="send (queue rsync)")
 
 
 def run_command(my_command, output_lbl):
@@ -23,6 +23,9 @@ def run_command(my_command, output_lbl):
     print(split_cmd)
     os.system(f'gnome-terminal -- bash -c "{my_command}; exec bash"')
     output_lbl.configure(text="Command was run")
+
+
+# TODO Add function for writing timestamps to file
 
 
 lbl_1 = ttk.Label(frame1, text="Log Timestamp")
