@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import Label, ttk
 import os
+from file_handler import write_timestamp_to_file
 
 root = tk.Tk()
 root.title("Helping Hand Tester")
@@ -23,16 +24,6 @@ def run_command(my_command, output_lbl):
     print(split_cmd)
     os.system(f'gnome-terminal -- bash -c "{my_command}; exec bash"')
     output_lbl.configure(text="Command was run")
-
-
-def write_timestamp_to_file(txt):
-    """Writes timestamp to queue one line at a time.
-    Args:
-        txt (string): timestamp
-    """
-    # TODO: Add a check to see if the entered string is actually a valid timestamp.
-    with open("timestamp_queue.txt", "a") as f:
-        f.write(f"{txt}\n")
 
 
 lbl_1 = ttk.Label(frame1, text="Log Timestamp")
