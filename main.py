@@ -22,6 +22,7 @@ def run_command(my_command, output_lbl):
     print(my_command)
     print(split_cmd)
     os.system(f'gnome-terminal -- bash -c "{my_command}; exec bash"')
+    output_lbl.configure(text="Command was run")
 
 
 lbl_1 = ttk.Label(frame1, text="Log Timestamp")
