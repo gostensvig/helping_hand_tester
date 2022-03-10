@@ -25,7 +25,14 @@ def run_command(my_command, output_lbl):
     output_lbl.configure(text="Command was run")
 
 
-# TODO Add function for writing timestamps to file
+def write_timestamp_to_file(txt):
+    """Writes timestamp to queue one line at a time.
+    Args:
+        txt (string): timestamp
+    """
+    # TODO: Add a check to see if the entered string is actually a valid timestamp.
+    with open("timestamp_queue.txt", "a") as f:
+        f.write(f"{txt}\n")
 
 
 lbl_1 = ttk.Label(frame1, text="Log Timestamp")
@@ -40,10 +47,9 @@ entry.pack()
 button = ttk.Button(
     frame1, text="Click me!", command=lambda: run_command(entry.get(), lbl_2)
 )
+button.pack()
 
 lbl_2 = Label()
 lbl_2.pack()
-
-button.pack()
 
 root.mainloop()
