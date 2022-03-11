@@ -16,6 +16,7 @@ frame1.pack(fill="both", expand=True)
 frame2.pack(fill="both", expand=True)
 notebook.add(frame1, text="run regression")
 notebook.add(frame2, text="send (queue rsync)")
+# TODO Separate the content of these tabs into their own files.
 
 
 def run_command(my_command, output_lbl):
