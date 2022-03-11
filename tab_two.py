@@ -10,3 +10,4 @@ class Tab2(tk.Frame):
 
         feedback_lbl = tk.Label(self)
         feedback_lbl.pack()
+        # TODO Add all widgets needed for queuing up rsync.
