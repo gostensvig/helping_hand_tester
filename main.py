@@ -37,7 +37,7 @@ entry.pack()
 
 # Button
 button = ttk.Button(
-    frame1, text="Click me!", command=lambda: run_command(entry.get(), lbl_2)
+    frame1, text="Click me!", command=lambda: write_timestamp_to_file(entry.get())
 )
 button.pack()
 
