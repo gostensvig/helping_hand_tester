@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import Label, ttk
+from tkinter import ttk
 from tab_one import Tab1
 from tab_two import Tab2
 
@@ -21,5 +21,5 @@ if __name__ == "__main__":
     root = tk.Tk()
     root.title("Helping Hand Tester")
     root.minsize(200, 200)
-    Example(root).pack(fill="both", expand=True)
+    notebook = Example(root).pack(fill="both", expand=True)
     root.mainloop()

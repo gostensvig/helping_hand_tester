@@ -27,10 +27,7 @@ class Tab1(tk.Frame):
         button = tk.Button(
             self,
             text="Run command",
-            command=lambda: run_command(entry.get(), feedback_lbl),
+            command=lambda: run_command(entry.get()),
         )
-
-        feedback_lbl = tk.Label(self)
-        feedback_lbl.pack()
 
         button.pack()
