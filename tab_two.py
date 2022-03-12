@@ -1,13 +1,30 @@
 import tkinter as tk
+from tkinter import Label, Button, Entry
+from file_handler import write_timestamp_to_file
 
 
 class Tab2(tk.Frame):
+    """
+    Tab 2 'Send (queue rsync)'
+    """
+
     def __init__(self, parent):
         tk.Frame.__init__(self, parent)
 
-        label = tk.Label(self, text="This is page 2")
-        label.pack(fill="both", expand=True, padx=20, pady=10)
+        add_label = Label(self, text="Log-Timestamp to Send:")
+        add_label.pack(fill="both")
 
-        feedback_lbl = tk.Label(self)
-        feedback_lbl.pack()
-        # TODO Add all widgets needed for queuing up rsync.
+        entry = Entry(self, width=25)
+        entry.insert(0, "20xx-xx-xx-xx-xx-xx-xxx")
+        entry.pack()
+
+        button = Button(
+            self, text="Add", command=lambda: write_timestamp_to_file(entry.get())
+        )
+        button.pack()
+
+        queue_label = Label(self, text="Queued Timestamps:")
+        queue_label.pack(fill="both")
+
+        list_label = Label(self, text="Dis here")
+        list_label.pack(fill="both")

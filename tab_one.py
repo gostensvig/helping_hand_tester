@@ -10,20 +10,15 @@ class Tab1(tk.Frame):
         lbl_1 = tk.Label(self, text="Log Timestamp")
         lbl_1.pack()
 
-        # Enty
         entry = tk.Entry(self)
         entry.insert(0, "test")
         entry.pack()
 
-        # Button
         button = tk.Button(
-            self,
-            text="Add log to queue",
-            command=lambda: write_timestamp_to_file(entry.get()),
+            self, text="Add", command=lambda: write_timestamp_to_file(entry.get())
         )
         button.pack()
 
-        # Button
         button = tk.Button(
             self,
             text="Run command",

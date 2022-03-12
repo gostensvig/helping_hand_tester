@@ -20,6 +20,6 @@ class Example(tk.Frame):
 if __name__ == "__main__":
     root = tk.Tk()
     root.title("Helping Hand Tester")
-    root.minsize(200, 200)
+    root.minsize(300, 300)
     notebook = Example(root).pack(fill="both", expand=True)
     root.mainloop()
