@@ -1,15 +1,14 @@
-import tkinter as tk
-from tkinter import Label, Button, Entry
+from tkinter import Label, Button, Entry, Frame
 from file_handler import write_timestamp_to_file
 
 
-class Tab2(tk.Frame):
+class Tab2(Frame):
     """
     Tab 2 'Send (queue rsync)'
     """
 
     def __init__(self, parent):
-        tk.Frame.__init__(self, parent)
+        Frame.__init__(self, parent)
 
         add_label = Label(self, text="Log-Timestamp to Send:")
         add_label.pack(fill="both")
