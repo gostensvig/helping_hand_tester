@@ -14,7 +14,7 @@ class Tab1(Frame):
         self.placeholder_entry = StringVar()
         self.placeholder_entry.set("20xx-xx-xx-xx-xx-xx-xxx")
 
-        self.add_label = Label(self, text="Log-Timestamp to Send:")
+        self.add_label = Label(self, text="Log-Timestamp to rsync:")
         self.add_label.pack(fill="both")
 
         self.entry = Entry(self, width=25, textvariable=self.placeholder_entry)
