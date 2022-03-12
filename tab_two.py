@@ -1,5 +1,4 @@
 from tkinter import Frame, Label, Entry, Button
-from file_handler import write_timestamp_to_file
 from cli_handler import run_command
 
 
@@ -17,11 +16,6 @@ class Tab2(Frame):
         entry = Entry(self)
         entry.insert(0, "test")
         entry.pack()
-
-        button = Button(
-            self, text="Add", command=lambda: write_timestamp_to_file(entry.get())
-        )
-        button.pack()
 
         button = Button(
             self,
