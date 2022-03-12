@@ -26,3 +26,14 @@ def write_timestamp_to_file(txt):
             f.write(f"{txt}\n")
 
     # TODO give deefback to user on succes or incorrect timestamp.
+
+
+def read_timestamps_from_file():
+    """
+    Reads file line by line and returns them as a list
+    """
+    timestamp_list = []
+    with open("timestamp_queue.txt") as f:
+        for line in f:
+            timestamp_list.append(line)
+    return timestamp_list
