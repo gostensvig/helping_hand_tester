@@ -27,3 +27,4 @@ class Tab1(Frame):
 
         list_label = Label(self, text="Dis here")
         list_label.pack(fill="both")
+        # TODO Create a way to update the list_label to match the contents of timestamp_queue.txt
