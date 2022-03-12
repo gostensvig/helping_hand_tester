@@ -1,20 +1,21 @@
-from tkinter import Label, Button, Entry, Frame
+from tkinter import Frame, Label, Entry, Button
 from file_handler import write_timestamp_to_file
+from cli_handler import run_command
 
 
 class Tab2(Frame):
     """
-    Tab 2 'Send (queue rsync)'
+    Tab 2 : Test for now
     """
 
     def __init__(self, parent):
         Frame.__init__(self, parent)
 
-        add_label = Label(self, text="Log-Timestamp to Send:")
-        add_label.pack(fill="both")
+        lbl_1 = Label(self, text="Log Timestamp")
+        lbl_1.pack()
 
-        entry = Entry(self, width=25)
-        entry.insert(0, "20xx-xx-xx-xx-xx-xx-xxx")
+        entry = Entry(self)
+        entry.insert(0, "test")
         entry.pack()
 
         button = Button(
@@ -22,8 +23,10 @@ class Tab2(Frame):
         )
         button.pack()
 
-        queue_label = Label(self, text="Queued Timestamps:")
-        queue_label.pack(fill="both")
+        button = Button(
+            self,
+            text="Run command",
+            command=lambda: run_command(entry.get()),
+        )
 
-        list_label = Label(self, text="Dis here")
-        list_label.pack(fill="both")
+        button.pack()

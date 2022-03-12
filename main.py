@@ -13,8 +13,8 @@ class Example(tk.Frame):
 
         page1 = Tab1(self.notebook)
         page2 = Tab2(self.notebook)
-        self.notebook.add(page1, text="Run Regression")
-        self.notebook.add(page2, text="Send (queue rsync)")
+        self.notebook.add(page1, text="Send (queue rsync)")
+        self.notebook.add(page2, text="Run Regression")
 
 
 if __name__ == "__main__":
